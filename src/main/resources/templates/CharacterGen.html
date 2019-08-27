@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>CharacterGen</title>
+</head>
+<body>
+	<form method="POST" action="CharacterGen">
+		<input type="text" name="name" /> <input type="submit" value="次へ" />
+		<th:block th:if="${name} and ''!=${name}">
+			<br />
+			<br /> 名前： [[${name}]]<br />
+		</th:block>
+	</form>
+</body>
+
+</html>
